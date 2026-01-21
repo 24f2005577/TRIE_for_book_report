@@ -27,4 +27,23 @@ class tree:
                     curr.update_max(ch)
                     curr=temp
             curr=self.top
-
+    def pred(self,k):
+        ans=""
+        curr=self.top
+        for i in k:
+            
+            if i not in curr.child.keys():
+                print("given combination not found")
+                return (None)
+            else:
+                curr=curr.child[i][0]
+                ans=ans+i
+        while curr.child.keys():
+            ch=curr.maxkey
+            ans=ans+ch
+            curr=curr.child[ch][0]
+        return (ans)
+            
+l=["hello","hey","ramji","hey"]
+tey=tree(l)
+print(tey.pred('he'))
