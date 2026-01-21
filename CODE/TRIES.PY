@@ -44,6 +44,3 @@ class tree:
             curr=curr.child[ch][0]
         return (ans)
             
-l=["hello","hey","ramji","hey"]
-tey=tree(l)
-print(tey.pred('he'))
